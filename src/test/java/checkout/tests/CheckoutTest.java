@@ -14,7 +14,7 @@ public class CheckoutTest extends TestInit {
         productViewPage.open("michael-kors-jet-set-travel-md-tote-pearl-grey");
         productViewPage.addProductToTheCart();
         shoppingBagPage.goToAddressPage();
-        addressPage.fillDataForRachelBasilHagen();
+        addressPage.rachelBasilDillColeHagen();
 
     }
 }
