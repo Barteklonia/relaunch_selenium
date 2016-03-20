@@ -54,6 +54,11 @@ public class AddressPage extends BasePage {
     @FindBy(css = ".btn__submit")
     WebElement submitBtn;
 
+    @FindBy(xpath = "//*[@id='modal-address-doctor']//div[7]//button")
+    WebElement addressDoctorSubmitBtn;
+
+    private String addressDocPopup = "//*[@id='modal-address-doctor']";
+
     public AddressPage(WebDriver driver) {
         super(driver);
         PageFactory.initElements(driver, this);
@@ -63,11 +68,16 @@ public class AddressPage extends BasePage {
         submitBtn.click();
     }
 
+    public void addressDocAccept(){
+        explicitWait(addressDocPopup);
+        addressDoctorSubmitBtn.click();
+    }
+
     public void rachelBasilDillColeHagen(){
         salutationFrau.click();
         firstName.sendKeys("Rachel");
         lastName.sendKeys("Hagen");
-        selectBirthdate("4", "10", "1988");
+        selectBirthdate("4", "April", "1988");
         email.sendKeys("Rachel-BasilDillCole@Hagen.de");
         hinweisCheckbox.click();
         zip.sendKeys("40221");

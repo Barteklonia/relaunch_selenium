@@ -1,6 +1,7 @@
 package checkout.tests;
 
 import checkout.pages.AddressPage;
+import checkout.pages.PaymentPage;
 import checkout.pages.ProductViewPage;
 import checkout.pages.ShoppingBagPage;
 import org.apache.commons.io.FileUtils;
@@ -29,6 +30,7 @@ public class TestInit {
     ProductViewPage productViewPage;
     ShoppingBagPage shoppingBagPage;
     AddressPage addressPage;
+    PaymentPage paymentPage;
 
     //Before each test class actions (setup driver, etc.)
     @BeforeClass(alwaysRun = true)
@@ -61,6 +63,7 @@ public class TestInit {
         productViewPage = new ProductViewPage(driver);
         shoppingBagPage = new ShoppingBagPage(driver);
         addressPage = new AddressPage(driver);
+        paymentPage = new PaymentPage(driver);
     }
 }
 

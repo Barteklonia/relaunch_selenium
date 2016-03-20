@@ -15,6 +15,8 @@ public class CheckoutTest extends TestInit {
         productViewPage.addProductToTheCart();
         shoppingBagPage.goToAddressPage();
         addressPage.rachelBasilDillColeHagen();
-
+        addressPage.submitAddressData();
+        addressPage.addressDocAccept();
+        paymentPage.checkPaymentList();
     }
 }
