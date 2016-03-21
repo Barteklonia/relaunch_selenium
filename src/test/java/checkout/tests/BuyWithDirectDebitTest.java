@@ -19,7 +19,9 @@ public class BuyWithDirectDebitTest extends TestInit {
         addressPage.rachelBasilDillColeHagen();
         addressPage.submitAddressData();
         addressPage.addressDocAccept();
-
+        paymentPage.selectPayment("Lastschrift");
+        Assert.assertTrue(directDebitPage.invalidATAccForDEStoreLFT());
+        Assert.assertTrue(directDebitPage.invalidAccLengthLFT());
     }
 
 }

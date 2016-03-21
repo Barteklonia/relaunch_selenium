@@ -16,7 +16,8 @@ public class PaymentPage extends BasePage{
 
     private String paymentMethod = ".payment-method__title";
 
-    @FindBy(xpath = "//*[contains(text(), 'Lastschrift')]")
+    private String paymentName = "//*[contains(@class, 'payment-method__title') and text() = '$5']";
+
 
 
     public PaymentPage (WebDriver driver) {
@@ -32,6 +33,10 @@ public class PaymentPage extends BasePage{
             actualPayments.add(paymentName);
         }
         return actualPayments;
+    }
+
+    public void selectPayment(String payment){
+        driver.findElement(By.xpath(paymentName.replace("$5", payment))).click();
     }
 
 }

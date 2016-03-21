@@ -1,9 +1,6 @@
 package checkout.tests;
 
-import checkout.pages.AddressPage;
-import checkout.pages.PaymentPage;
-import checkout.pages.ProductViewPage;
-import checkout.pages.ShoppingBagPage;
+import checkout.pages.*;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -29,6 +26,9 @@ public class TestInit {
     ShoppingBagPage shoppingBagPage;
     AddressPage addressPage;
     PaymentPage paymentPage;
+    DirectDebitPage directDebitPage;
+    CreditCardPage creditCardPage;
+    InstallmentsPaymentPage installmentsPaymentPage;
 
     //Before each test class actions (setup driver, etc.)
     @BeforeClass(alwaysRun = true)
@@ -68,6 +68,9 @@ public class TestInit {
         shoppingBagPage = new ShoppingBagPage(driver);
         addressPage = new AddressPage(driver);
         paymentPage = new PaymentPage(driver);
+        directDebitPage = new DirectDebitPage(driver);
+        creditCardPage = new CreditCardPage(driver);
+        installmentsPaymentPage = new InstallmentsPaymentPage(driver);
     }
 }
 
