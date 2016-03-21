@@ -10,9 +10,7 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.ITestResult;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeClass;
+import org.testng.annotations.*;
 
 import java.io.File;
 import java.io.IOException;
@@ -57,6 +55,12 @@ public class TestInit {
     @AfterClass(alwaysRun = true)
     public void tearDown() {
         driver.quit();
+    }
+
+    @AfterTest(alwaysRun = true)
+    public void ClearBrowserCache()
+    {
+        driver.manage().deleteAllCookies(); //delete all cookies
     }
 
     private void initPages(){

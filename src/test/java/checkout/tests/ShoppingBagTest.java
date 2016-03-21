@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
  */
 public class ShoppingBagTest extends TestInit{
 
-    @Test
+    @Test(enabled=false)
     public void restoreCart(){
 
         productViewPage.open("michael-kors-jet-set-travel-md-tote-pearl-grey");
@@ -16,6 +16,20 @@ public class ShoppingBagTest extends TestInit{
         shoppingBagPage.removeAllProductsFromCartAndSaveLastProductName();
         shoppingBagPage.restoreProduct();
         Assert.assertTrue(shoppingBagPage.checkCorrectProductRestored());
+
+    }
+
+    @Test
+    public void removeAllProductsFromCart(){
+
+        productViewPage.open("michael-kors-jet-set-travel-md-tote-pearl-grey");
+        productViewPage.addProductToTheCart();
+        productViewPage.open("burberry-0be-4178-58-331613");
+        productViewPage.addProductToTheCart();
+        productViewPage.open("abro-auto-5");
+        productViewPage.addProductToTheCart();
+        shoppingBagPage.removeAllProductsFromCart();
+        shoppingBagPage.restoreProduct();
 
     }
 

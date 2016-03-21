@@ -3,20 +3,23 @@ package checkout.tests;
 import org.junit.Assert;
 import org.testng.annotations.Test;
 
+import java.util.Arrays;
+
 /**
- * Created by Alinka on 17.03.2016.
+ * Created by roshchupkina on 3/21/2016.
  */
-public class CheckoutTest extends TestInit {
+public class BuyWithDirectDebitTest extends TestInit {
 
     @Test
-    public void paymentOverview() {
+    public void rossChiliDillColeHagen() {
 
-        productViewPage.open("michael-kors-jet-set-travel-md-tote-pearl-grey");
+        productViewPage.open("abro-crac-dakar-leather-handbag-guncolor");
         productViewPage.addProductToTheCart();
         shoppingBagPage.goToAddressPage();
         addressPage.rachelBasilDillColeHagen();
         addressPage.submitAddressData();
         addressPage.addressDocAccept();
-        paymentPage.checkPaymentList();
+
     }
+
 }
