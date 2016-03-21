@@ -46,4 +46,11 @@ public class DirectDebitPage extends BasePage {
             return true;
         } else return false;
     }
+
+    public boolean validAccountLFT(){
+        IBANfield.sendKeys("DE657362746374637463");
+        if (isElementPresent(By.id("account_iban-error"))) {
+            return true;
+        } else return false;
+    }
 }

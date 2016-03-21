@@ -11,7 +11,7 @@ import java.util.Arrays;
 public class BuyWithDirectDebitTest extends TestInit {
 
     @Test
-    public void rossChiliDillColeHagen() {
+    public void checkErrorIsShownForInvalidAccountLFT() {
 
         productViewPage.open("abro-crac-dakar-leather-handbag-guncolor");
         productViewPage.addProductToTheCart();
@@ -24,4 +24,16 @@ public class BuyWithDirectDebitTest extends TestInit {
         Assert.assertTrue(directDebitPage.invalidAccLengthLFT());
     }
 
+    @Test
+    public void checkReviewPageIsShownForCorrectAccountLFT() {
+
+        productViewPage.open("abro-crac-dakar-leather-handbag-guncolor");
+        productViewPage.addProductToTheCart();
+        shoppingBagPage.goToAddressPage();
+        addressPage.rachelBasilDillColeHagen();
+        addressPage.submitAddressData();
+        addressPage.addressDocAccept();
+        paymentPage.selectPayment("Lastschrift");
+
+    }
 }
