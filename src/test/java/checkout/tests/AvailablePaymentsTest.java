@@ -194,4 +194,5 @@ public class AvailablePaymentsTest extends TestInit {
                 Arrays.asList("KREDITKARTE", "PAYPAL", "SOFORT-ÜBERWEISUNG"),
                 paymentPage.checkActualPaymentList());
     }
+
 }
