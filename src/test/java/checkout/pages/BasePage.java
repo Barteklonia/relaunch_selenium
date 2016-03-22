@@ -7,7 +7,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.*;
 
 import java.util.concurrent.TimeUnit;
-import java.util.function.Function;
 
 /**
  * Created by Alinka on 16.03.2016.
