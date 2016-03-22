@@ -2,6 +2,8 @@ package checkout.pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 /**
@@ -10,6 +12,9 @@ import org.openqa.selenium.support.PageFactory;
 public class ReviewPage extends BasePage{
 
     private String reviewPageTitle = "//*[contains(text(), 'Alles richtig?')]";
+
+    @FindBy(xpath = "//*[contains(text(), 'Zahlungsart')]")
+    WebElement backToPaymentsLink;
 
     public ReviewPage(WebDriver driver) {
         super(driver);
@@ -20,5 +25,9 @@ public class ReviewPage extends BasePage{
         if(isElementPresent(By.xpath(reviewPageTitle))){
             return true;
         } else return false;
+    }
+
+    public void goBackToPayments(){
+        backToPaymentsLink.click();
     }
 }

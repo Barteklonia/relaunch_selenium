@@ -255,4 +255,6 @@ public class AddressPage extends BasePage {
         houseNo.sendKeys("50");
         sameShippingAddressCheckbox.click();
     }
+
+
 }

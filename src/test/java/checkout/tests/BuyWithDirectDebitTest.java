@@ -3,8 +3,6 @@ package checkout.tests;
 import org.junit.Assert;
 import org.testng.annotations.Test;
 
-import java.util.Arrays;
-
 /**
  * Created by roshchupkina on 3/21/2016.
  */
@@ -35,11 +33,21 @@ public class BuyWithDirectDebitTest extends TestInit {
     }
 
     @Test
-    public void checkReviewPageIsShownForCorrectAccountLFT() {
-
+    public void buyWithLFT() {
         goToLFTPaymentPage();
         directDebitPage.enterIBAN();
         directDebitPage.submitData();
+        Assert.assertTrue(reviewPage.checkPageIsOpened());
+    }
+
+    @Test
+    public void buyWithSavedLFTAcc(){
+        goToLFTPaymentPage();
+        directDebitPage.enterIBAN();
+        directDebitPage.submitData();
+        reviewPage.goBackToPayments();
+        paymentPage.selectPayment("Lastschrift");
+        directDebitPage.selectRandomSavedAccAndSubmit();
         Assert.assertTrue(reviewPage.checkPageIsOpened());
     }
 }

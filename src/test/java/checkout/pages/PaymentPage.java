@@ -8,6 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 /**
  * Created by Alinka on 20.03.2016.
@@ -17,8 +18,6 @@ public class PaymentPage extends BasePage{
     private String paymentMethod = ".payment-method__title";
 
     private String paymentName = "//*[contains(@class, 'payment-method__title') and text() = '$5']";
-
-
 
     public PaymentPage (WebDriver driver) {
         super(driver);
@@ -38,5 +37,7 @@ public class PaymentPage extends BasePage{
     public void selectPayment(String payment){
         driver.findElement(By.xpath(paymentName.replace("$5", payment))).click();
     }
+
+
 
 }
