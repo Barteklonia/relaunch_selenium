@@ -10,30 +10,36 @@ import java.util.Arrays;
  */
 public class BuyWithDirectDebitTest extends TestInit {
 
-    @Test
-    public void checkErrorIsShownForInvalidAccountLFT() {
-
+    protected void goToLFTPaymentPage(){
         productViewPage.open("abro-crac-dakar-leather-handbag-guncolor");
         productViewPage.addProductToTheCart();
         shoppingBagPage.goToAddressPage();
-        addressPage.rachelBasilDillColeHagen();
+        addressPage.rossChiliDillColeHagen();
         addressPage.submitAddressData();
         addressPage.addressDocAccept();
         paymentPage.selectPayment("Lastschrift");
+    }
+
+    @Test
+    public void checkErrorIsShownForInvalidAccountLFT() {
+        goToLFTPaymentPage();
         Assert.assertTrue(directDebitPage.invalidATAccForDEStoreLFT());
         Assert.assertTrue(directDebitPage.invalidAccLengthLFT());
     }
 
     @Test
+    public void checkBICisPrefilledAutomatically(){
+            goToLFTPaymentPage();
+        directDebitPage.checkBICisFilledAutomatically();
+        Assert.assertEquals("Prefilled BIC is invalid", "COBADEFFXXX", directDebitPage.checkBICisFilledAutomatically());
+    }
+
+    @Test
     public void checkReviewPageIsShownForCorrectAccountLFT() {
 
-        productViewPage.open("abro-crac-dakar-leather-handbag-guncolor");
-        productViewPage.addProductToTheCart();
-        shoppingBagPage.goToAddressPage();
-        addressPage.rachelBasilDillColeHagen();
-        addressPage.submitAddressData();
-        addressPage.addressDocAccept();
-        paymentPage.selectPayment("Lastschrift");
-
+        goToLFTPaymentPage();
+        directDebitPage.enterIBAN();
+        directDebitPage.submitData();
+        Assert.assertTrue(reviewPage.checkPageIsOpened());
     }
 }

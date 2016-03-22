@@ -77,7 +77,7 @@ public class AddressPage extends BasePage {
         salutationFrau.click();
         firstName.sendKeys("Rachel");
         lastName.sendKeys("Hagen");
-        selectBirthdate("4", "April", "1988");
+        selectBirthdate("4", "Februar", "1988");
         email.sendKeys("Rachel-BasilDillCole@Hagen.de");
         hinweisCheckbox.click();
         zip.sendKeys("40221");
@@ -91,7 +91,7 @@ public class AddressPage extends BasePage {
         salutationFrau.click();
         firstName.sendKeys("Fibi");
         lastName.sendKeys("Hagen");
-        selectBirthdate("4", "10", "1988");
+        selectBirthdate("4", "Februar", "1988");
         email.sendKeys("Fibi-BasilDillCole@Hagen.de");
         hinweisCheckbox.click();
         zip.sendKeys("40221");
@@ -105,7 +105,7 @@ public class AddressPage extends BasePage {
         salutationFrau.click();
         firstName.sendKeys("Fibi");
         lastName.sendKeys("Ikea");
-        selectBirthdate("4", "10", "1988");
+        selectBirthdate("4", "Februar", "1988");
         email.sendKeys("Fibi-BasilDillCole@Ikea.de");
         hinweisCheckbox.click();
         zip.sendKeys("40221");
@@ -119,7 +119,7 @@ public class AddressPage extends BasePage {
         salutationFrau.click();
         firstName.sendKeys("Joey");
         lastName.sendKeys("Ulm");
-        selectBirthdate("4", "10", "1988");
+        selectBirthdate("4", "Februar", "1988");
         email.sendKeys("Joey-BasilDillCole@Ulm.de");
         hinweisCheckbox.click();
         zip.sendKeys("40221");
@@ -133,7 +133,7 @@ public class AddressPage extends BasePage {
         salutationFrau.click();
         firstName.sendKeys("Chandler");
         lastName.sendKeys("Ulm");
-        selectBirthdate("4", "10", "1988");
+        selectBirthdate("4", "Februar", "1988");
         email.sendKeys("Chandler-BasilDillCole@Ulm.de");
         hinweisCheckbox.click();
         zip.sendKeys("40221");
@@ -147,7 +147,7 @@ public class AddressPage extends BasePage {
         salutationFrau.click();
         firstName.sendKeys("Ross");
         lastName.sendKeys("Ulm");
-        selectBirthdate("4", "10", "1988");
+        selectBirthdate("4", "Februar", "1988");
         email.sendKeys("Ross-BasilDillCole@Ulm.de");
         hinweisCheckbox.click();
         zip.sendKeys("40221");
@@ -161,7 +161,7 @@ public class AddressPage extends BasePage {
         salutationFrau.click();
         firstName.sendKeys("Ross");
         lastName.sendKeys("Hagen");
-        selectBirthdate("4", "10", "1988");
+        selectBirthdate("4", "Februar", "1988");
         email.sendKeys("Ross-ChiliDillCole@Hagen.de");
         hinweisCheckbox.click();
         zip.sendKeys("40221");
@@ -175,7 +175,7 @@ public class AddressPage extends BasePage {
         salutationFrau.click();
         firstName.sendKeys("Ross");
         lastName.sendKeys("Ulm");
-        selectBirthdate("4", "10", "1988");
+        selectBirthdate("4", "Februar", "1988");
         email.sendKeys("Ross-BasilDillTomato@Ulm.de");
         hinweisCheckbox.click();
         zip.sendKeys("40221");
@@ -189,7 +189,7 @@ public class AddressPage extends BasePage {
         salutationFrau.click();
         firstName.sendKeys("Ross");
         lastName.sendKeys("Hagen");
-        selectBirthdate("4", "10", "1988");
+        selectBirthdate("4", "Februar", "1988");
         email.sendKeys("Ross-ChiliPaprikaCole@Hagen.de");
         hinweisCheckbox.click();
         zip.sendKeys("40221");
@@ -204,7 +204,7 @@ public class AddressPage extends BasePage {
         salutationFrau.click();
         firstName.sendKeys("Ross");
         lastName.sendKeys("Ulm");
-        selectBirthdate("4", "10", "1988");
+        selectBirthdate("4", "Februar", "1988");
         email.sendKeys("Ross-ChiliPaprikaTomato@Ulm.de");
         hinweisCheckbox.click();
         zip.sendKeys("40221");
@@ -218,7 +218,7 @@ public class AddressPage extends BasePage {
         salutationFrau.click();
         firstName.sendKeys("Monika");
         lastName.sendKeys("Ulm");
-        selectBirthdate("4", "10", "1988");
+        selectBirthdate("4", "Februar", "1988");
         email.sendKeys("Monika-ChiliPaprikaTomato@Ulm.de");
         hinweisCheckbox.click();
         zip.sendKeys("40221");
@@ -232,7 +232,7 @@ public class AddressPage extends BasePage {
         salutationFrau.click();
         firstName.sendKeys("Monika");
         lastName.sendKeys("Aachen");
-        selectBirthdate("4", "10", "1988");
+        selectBirthdate("4", "Februar", "1988");
         email.sendKeys("Monika-BasilDillCole@Aachen.de");
         hinweisCheckbox.click();
         zip.sendKeys("40221");
@@ -246,7 +246,7 @@ public class AddressPage extends BasePage {
         salutationFrau.click();
         firstName.sendKeys("Monika");
         lastName.sendKeys("Oldenburg");
-        selectBirthdate("4", "10", "1988");
+        selectBirthdate("4", "Februar", "1988");
         email.sendKeys("Monika-BasilDillTomato@Oldenburg.de");
         hinweisCheckbox.click();
         zip.sendKeys("40221");

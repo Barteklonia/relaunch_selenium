@@ -29,6 +29,7 @@ public class TestInit {
     DirectDebitPage directDebitPage;
     CreditCardPage creditCardPage;
     InstallmentsPaymentPage installmentsPaymentPage;
+    ReviewPage reviewPage;
 
     //Before each test class actions (setup driver, etc.)
     @BeforeClass(alwaysRun = true)
@@ -57,7 +58,7 @@ public class TestInit {
         driver.quit();
     }
 
-    @AfterTest(alwaysRun = true)
+    @AfterMethod(alwaysRun = true)
     public void ClearBrowserCache()
     {
         driver.manage().deleteAllCookies(); //delete all cookies
@@ -71,6 +72,7 @@ public class TestInit {
         directDebitPage = new DirectDebitPage(driver);
         creditCardPage = new CreditCardPage(driver);
         installmentsPaymentPage = new InstallmentsPaymentPage(driver);
+        reviewPage = new ReviewPage(driver);
     }
 }
 
